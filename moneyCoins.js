@@ -1,5 +1,19 @@
 function moneyCoins (money) {
   // your implementation code here
+  var result = []
+  var coins = [1, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000]
+  var i = coins.length-1
+  while (money > 0){
+      while (i >= 0){
+          if (money >= coins[i]){
+            money -= coins[i]
+            result.push(coins[i])
+          }else{
+            i--
+         }
+      }
+  }
+  return result
 }
 
 // Drive code
