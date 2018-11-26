@@ -3,7 +3,7 @@ function moneyCoins (money) {
   const Money = [10000,5000,2000,1000,500,200,100,50,20,10,1]
   let result = []
   Money.forEach(element => {
-      while(money >= element){
+      while (money >= element) {
           money -= element
           result.push(element)
       }  
