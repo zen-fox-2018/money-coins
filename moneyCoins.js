@@ -1,5 +1,13 @@
 function moneyCoins (money) {
-  // your implementation code here
+  let pecahan = [10000, 5000 , 2000 , 1000 , 500 , 200 , 100 , 50 , 20, 10 , 1]
+  let result = []
+  pecahan.forEach(function(pecahan) {
+    while(money >= pecahan) {
+      money -= pecahan
+      result.push(pecahan)
+    }
+  })
+  return result
 }
 
 // Drive code
