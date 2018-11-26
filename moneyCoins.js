@@ -1,5 +1,14 @@
-function moneyCoins (money) {
-  // your implementation code here
+function moneyCoins(money) {
+  var uangKertas = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 1];
+  var arr = [];
+  for (var i = 0; i < uangKertas.length; i++) {
+    if (money >= uangKertas[i]) {
+      money -= uangKertas[i];
+      arr.push(uangKertas[i]);
+      i = -1;
+    }
+  }
+  return arr;
 }
 
 // Drive code
