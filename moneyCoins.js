@@ -1,5 +1,15 @@
+
 function moneyCoins (money) {
-  // your implementation code here
+  let coins = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 1];
+  let result = [];
+
+  coins.forEach(element => {
+    while(money >= element) {
+      result.push(element);
+      money -= element;
+    }
+  })
+  return result;
 }
 
 // Drive code
