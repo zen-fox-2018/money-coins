@@ -1,5 +1,14 @@
 function moneyCoins (money) {
   // your implementation code here
+  const arr = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 1]
+  let output = []
+  arr.forEach((a) => {
+    while(money >= a) {
+      money = money - a
+      output.push(a)
+    }
+  })
+  return output
 }
 
 // Drive code
