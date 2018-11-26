@@ -1,5 +1,17 @@
 function moneyCoins (money) {
-  // your implementation code here
+  result = []
+  var kembalian = money
+  var coint = [10000,5000,2000,500,200,50,20,1]
+  for(i = kembalian; i >0; i --){
+    for(j = 0; j < coint.length; j ++){
+      if(i === coint[j]){
+        result.push(coint[j])
+        kembalian = kembalian - coint[j]
+        i = kembalian
+      }
+    }
+  }
+  return  result
 }
 
 // Drive code
