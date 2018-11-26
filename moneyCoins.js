@@ -1,5 +1,16 @@
 function moneyCoins (money) {
-  // your implementation code here
+  let uang = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 1]
+  let result = []
+  let i = 0
+  while (money) {
+    if (money - uang[i] < 0) {
+      i++
+    } else {
+      money -= uang[i]
+      result.push(uang[i])
+    }
+  }
+  return result
 }
 
 // Drive code
