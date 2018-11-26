@@ -1,5 +1,15 @@
 function moneyCoins (money) {
-  // your implementation code here
+  var result = []
+  var uang = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 1]
+
+  for (let i = 0; i < uang.length; i++) {
+    if (money >= uang[i]) {
+      result.push(uang[i])
+      money -= uang[i]
+      i--
+    }
+  }
+  return result
 }
 
 // Drive code
