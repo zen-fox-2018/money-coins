@@ -1,5 +1,15 @@
 function moneyCoins (money) {
-  // your implementation code here
+  let dic = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 1]
+  let result = []
+  let moneyTotal = money
+  for (var i = 0; i < dic.length; i++) {
+    if ((moneyTotal - dic[i]) >= 0) {
+      result.push(dic[i])
+      moneyTotal = moneyTotal - dic[i]
+      i--
+    }
+  }
+  return result
 }
 
 // Drive code
